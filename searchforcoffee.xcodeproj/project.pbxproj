@@ -124,7 +124,6 @@
 				BC47B88610169AB4FEF6433C /* Pods-searchforcoffee.debug.xcconfig */,
 				0AE3702E4AA4BF93AA5DEBF3 /* Pods-searchforcoffee.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

@@ -10,11 +10,10 @@ import UIKit
 class CustomTextField: UITextField {
 
     enum CustomTextFieldType {
-        case username
         case email
-        case smsverification
         case password
     }
+//    private let placeholderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     private let authFieldType: CustomTextFieldType
     private let rightEyeButton: UIButton = {
         
@@ -29,10 +28,17 @@ class CustomTextField: UITextField {
         
         self.clearButtonMode = .whileEditing
         
-        self.backgroundColor = .secondarySystemBackground
-        self.layer.cornerRadius = 22
+        self.backgroundColor = .white
+        self.layer.cornerRadius = 26
         self.font = .systemFont(ofSize: 14, weight: .light)
-                   
+        self.textColor = .black
+        self.textColor = #colorLiteral(red: 0.6862745098, green: 0.5803921569, blue: 0.4745098039, alpha: 1) //#AF9479
+        
+        let placeholderColor = #colorLiteral(red: 0.6862745098, green: 0.5803921569, blue: 0.4745098039, alpha: 1) //#AF9479
+        let placeholderText = (fieldType == .email) ? "example@example.com" : ""
+        let attributes = [NSAttributedString.Key.foregroundColor: placeholderColor]
+        self.attributedPlaceholder = NSAttributedString(string: placeholderText, attributes: attributes)
+        
         //to apply Shadow
         self.layer.shadowOpacity = 0.4
         self.layer.shadowRadius = 3.0
@@ -50,20 +56,11 @@ class CustomTextField: UITextField {
         self.autocapitalizationType = .none
         
         switch authFieldType {
-        case .username:
-            self.placeholder = "Иванов Иван Иванович"
-            self.autocapitalizationType = .words
-            
         case .email:
-            self.placeholder = "Ivanov@example.com"
+            self.placeholder = "example@example.com"
             self.keyboardType = .emailAddress
             self.textContentType = .emailAddress
-            
-        case .smsverification:
-            self.placeholder = ""
-            self.keyboardType = .decimalPad
-            self.textContentType = .password
-            
+                  
         case .password:
             self.placeholder = ""
             self.isSecureTextEntry = true

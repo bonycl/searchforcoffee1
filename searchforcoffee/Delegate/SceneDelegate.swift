@@ -18,11 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         self.window?.windowScene = windowScene
 
-        let vc = LoginViewController()
+        let vc = RegisterViewController()
         
         let nav = UINavigationController(rootViewController: vc)
         nav.addCustomBottomLine(color: .lightGray, height: 1)
-        nav.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.591455996, green: 0.4628993273, blue: 0.3180905282, alpha: 1)] //#846340
+//        nav.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.591455996, green: 0.4628993273, blue: 0.3180905282, alpha: 1)] //#846340
        
         
         self.window?.rootViewController = nav

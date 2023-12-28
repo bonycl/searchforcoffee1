@@ -12,7 +12,7 @@ class CustomButton: UIButton {
     init(title: String, hasBackground: Bool = false) {
         super.init(frame: .zero)
         self.setTitle(title, for: .normal)
-        self.layer.cornerRadius = 22
+        self.layer.cornerRadius = 26
         self.layer.masksToBounds = true
         self.titleLabel?.font = UIFont.systemFont(ofSize: 18,weight: .semibold)
         switch hasBackground {

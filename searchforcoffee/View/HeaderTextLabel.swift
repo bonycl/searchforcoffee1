@@ -17,7 +17,8 @@ class HeaderTextLabel: UIView {
        label.textColor = .label
        label.textAlignment = .left
        label.numberOfLines = 1
-       label.font = .systemFont(ofSize: 18, weight: .medium)
+       label.font = .systemFont(ofSize: 15, weight: .medium)
+       label.textColor = #colorLiteral(red: 0.5176470588, green: 0.3882352941, blue: 0.2509803922, alpha: 1) //#846340
        //TODO: checking constrains via background color
 //       label.backgroundColor = .gray
        label.text = "error"

@@ -6,18 +6,16 @@
 //
 
 import UIKit
+import SnapKit
 
 class LoginViewController: UIViewController {
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setupUI()
-    }
-
-    private func setupUI() {
-        self.view.backgroundColor = .white
+        
+        self.view.backgroundColor = .systemPink
         navigationController?.navigationBar.topItem?.title = "Регистрация"
+        navigationController?.navigationBar.barTintColor = .white
     }
-
 }
