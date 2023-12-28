@@ -31,7 +31,7 @@ class CustomTextField: UITextField {
         
         self.backgroundColor = .secondarySystemBackground
         self.layer.cornerRadius = 22
-        self.font = .sfProText(ofSize: 14, weight: .light)
+        self.font = .systemFont(ofSize: 14, weight: .light)
                    
         //to apply Shadow
         self.layer.shadowOpacity = 0.4
