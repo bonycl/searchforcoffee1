@@ -42,6 +42,7 @@ class CustomButton: UIButton {
     private func updateBackgroundColor() {
            if self.isEnabled {
                self.backgroundColor = #colorLiteral(red: 0.2039215686, green: 0.1764705882, blue: 0.1019607843, alpha: 1) //#342D1A
+               
            } else {
                self.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
            }

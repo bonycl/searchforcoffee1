@@ -42,7 +42,8 @@ class CustomTextField: UITextField {
         //to apply Shadow
         self.layer.shadowOpacity = 0.4
         self.layer.shadowRadius = 3.0
-        self.layer.borderColor = UIColor.black.withAlphaComponent(0.25).cgColor
+        self.layer.borderColor =  #colorLiteral(red: 0.5176470588, green: 0.3882352941, blue: 0.2509803922, alpha: 1) //#846340
+        self.layer.borderWidth = 1.5
         self.layer.shadowOffset = CGSize(width: 0, height: 3)
         self.layer.shadowColor = UIColor.black.cgColor //Any dark color
 
