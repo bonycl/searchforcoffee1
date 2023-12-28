@@ -13,7 +13,8 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = .systemPink
-
+        navigationController?.navigationBar.topItem?.title = "Регистрация" 
+        navigationController?.navigationBar.barTintColor = .white
     }
 
 

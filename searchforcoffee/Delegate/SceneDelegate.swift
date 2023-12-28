@@ -14,14 +14,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let window = UIWindow(windowScene: windowScene)
         
-        let vc = RegisterViewController()
+        self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        self.window?.windowScene = windowScene
+
+        let vc = LoginViewController()
+        
         let nav = UINavigationController(rootViewController: vc)
+        nav.addCustomBottomLine(color: .lightGray, height: 1)
+        nav.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.591455996, green: 0.4628993273, blue: 0.3180905282, alpha: 1)] //#846340
+       
         
-        window.rootViewController = nav
-        
-        self.window = window
+        self.window?.rootViewController = nav
         self.window?.makeKeyAndVisible()
     }
 
