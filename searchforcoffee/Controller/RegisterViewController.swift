@@ -17,6 +17,7 @@ class RegisterViewController: UIViewController {
     private let passwordTextField = CustomTextField(fieldType: .password)
     private let repeatPasswordLabel = HeaderTextLabel(title: "Повторите пароль")
     private let repaetPasswordTextField = CustomTextField(fieldType: .password)
+    private let registratePressed = CustomButton(title: "Регистрация")
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -28,6 +29,7 @@ class RegisterViewController: UIViewController {
     private func setupUI() {
         self.view.backgroundColor = .white
         navigationController?.navigationBar.topItem?.title = "Регистрация"
+        registratePressed.isEnabled = true
         
         self.view.addSubview(emailLabel)
         self.view.addSubview(emailTextField)
@@ -35,6 +37,7 @@ class RegisterViewController: UIViewController {
         self.view.addSubview(passwordTextField)
         self.view.addSubview(repeatPasswordLabel)
         self.view.addSubview(repaetPasswordTextField)
+        self.view.addSubview(registratePressed)
         
         //MARK: - constrains
         emailLabel.snp.makeConstraints { make in
@@ -68,6 +71,12 @@ class RegisterViewController: UIViewController {
             make.left.equalToSuperview().inset(18)
             make.right.equalToSuperview().inset(15)
             make.top.equalTo(repeatPasswordLabel.snp.bottom).offset(15+8)
+            make.height.equalTo(53)
+        }
+        registratePressed.snp.makeConstraints { make in
+            make.left.equalToSuperview().inset(18)
+            make.right.equalToSuperview().inset(15)
+            make.top.equalTo(repaetPasswordTextField.snp.bottom).offset(30)
             make.height.equalTo(53)
         }
     }

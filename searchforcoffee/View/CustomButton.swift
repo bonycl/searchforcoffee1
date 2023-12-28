@@ -18,7 +18,7 @@ class CustomButton: UIButton {
         switch hasBackground {
         case true:
             //MARK: - Setup BackgroundColor for button
-            self.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.8980392157, blue: 0.8196078431, alpha: 1) //F6E5D1
+            self.backgroundColor = #colorLiteral(red: 0.2039215686, green: 0.1764705882, blue: 0.1019607843, alpha: 1) //#342D1A
             // apply shadow
             self.layer.masksToBounds = false
             self.layer.shadowOpacity = 0.4
@@ -31,7 +31,7 @@ class CustomButton: UIButton {
                         
         case false:
             self.backgroundColor = .clear
-//            self.setTitleColor ( #colorLiteral(red: 1, green: 0.5921106339, blue: 0.3732565343, alpha: 1), for: .normal)
+//            self.setTitleColor = UIColor(red: 52, green: 45, blue: 26, alpha: 1)
        
         }
     }
@@ -41,7 +41,7 @@ class CustomButton: UIButton {
     }
     private func updateBackgroundColor() {
            if self.isEnabled {
-               self.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.8980392157, blue: 0.8196078431, alpha: 1) //F6E5D1
+               self.backgroundColor = #colorLiteral(red: 0.2039215686, green: 0.1764705882, blue: 0.1019607843, alpha: 1) //#342D1A
            } else {
                self.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
            }
