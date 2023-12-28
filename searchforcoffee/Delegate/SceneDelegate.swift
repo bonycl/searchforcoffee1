@@ -24,6 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         nav.addCustomBottomLine(color: .lightGray, height: 1)
         nav.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.591455996, green: 0.4628993273, blue: 0.3180905282, alpha: 1)] //#846340
         nav.navigationBar.topItem?.backButtonTitle = ""
+        nav.navigationBar.tintColor =  #colorLiteral(red: 0.5176470588, green: 0.3882352941, blue: 0.2509803922, alpha: 1) //#846340
         
         self.window?.rootViewController = nav
         self.window?.makeKeyAndVisible()
