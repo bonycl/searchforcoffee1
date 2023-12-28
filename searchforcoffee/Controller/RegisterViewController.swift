@@ -22,13 +22,18 @@ class RegisterViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.registratePressed.addTarget(self, action: #selector(goToNextVc), for: .touchUpInside)
         setupUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.backgroundColor = .white
+        self.navigationItem.title = "Регистрация"
     }
 
     private func setupUI() {
-        self.view.backgroundColor = .white
-        navigationController?.navigationBar.topItem?.title = "Регистрация"
         registratePressed.isEnabled = true
         
         self.view.addSubview(emailLabel)
@@ -43,7 +48,7 @@ class RegisterViewController: UIViewController {
         emailLabel.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(18)
             make.right.equalToSuperview().inset(15)
-            make.top.equalToSuperview().offset(119)
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(190)
         }
         emailTextField.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(18)
@@ -81,13 +86,13 @@ class RegisterViewController: UIViewController {
         }
     }
     
-    
-    
-    
-    
-    
-   
-
+    @objc private func goToNextVc() {
+        print("DEBUG :", "goToNextVc")
+        let vc = LoginViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+        
+    }
 
 }
 
